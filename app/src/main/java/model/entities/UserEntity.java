@@ -1,6 +1,6 @@
 package model.entities;
 
-class User {
+class UserEntity {
     String name;
     String surname;
 }

@@ -1,15 +1,13 @@
 package model.entities;
 
-import android.support.annotation.Nullable;
-
 /**
  * Created by otto on 26.04.18.
  */
 
 public class ComputerEntity {
     private String name;
-//    private String state;
-    private User user;
+    //    private String state;
+    private UserEntity user;
 
     /***********************
      * GETTERS AND SETTERS */
@@ -21,9 +19,11 @@ public class ComputerEntity {
         this.name = name;
     }
 
+    public void setUser(UserEntity user) {
+        this.user = user;
+    }
     /* GETTERS AND SETTERS *
      ***********************/
-
 
     /**
      * Is this computer occupied by someone
@@ -33,5 +33,6 @@ public class ComputerEntity {
     public boolean isOccupied() {
         return user != null;
     }
+
 
 }
