@@ -49,6 +49,8 @@ public class DownloadRequest extends Request<List<RoomEntity>> {
             return Response.error(new ParseError(e));
         } catch (JsonSyntaxException e) {
             return Response.error(new ParseError(e));
+        } catch (java.lang.ClassCastException e) {
+            return Response.error(new ParseError(e));
         }
     }
 
