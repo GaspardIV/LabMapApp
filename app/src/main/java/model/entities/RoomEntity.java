@@ -7,6 +7,8 @@ import java.util.ArrayList;
  */
 
 public class RoomEntity {
+    public static final String ROOM_STR_ID_PREFIX = "room_";
+
     private String roomStrId;
     private ArrayList<ComputerEntity> computers;
     private int freeStations;
