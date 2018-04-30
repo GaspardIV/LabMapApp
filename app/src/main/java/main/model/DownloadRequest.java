@@ -1,4 +1,4 @@
-package model;
+package main.model;
 
 import com.android.volley.NetworkResponse;
 import com.android.volley.ParseError;
@@ -17,8 +17,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 
-import model.converters.JsonConverter;
-import model.entities.RoomEntity;
+import main.model.converters.JsonConverter;
+import main.model.entities.RoomEntity;
 
 public class DownloadRequest extends Request<List<RoomEntity>> {
     private final Response.Listener<List<RoomEntity>> listener;
@@ -34,7 +34,6 @@ public class DownloadRequest extends Request<List<RoomEntity>> {
         try {
             List<RoomEntity> rooms = new ArrayList<>();
             String json = new String(response.data, HttpHeaderParser.parseCharset(response.headers));
-            System.out.println(json);
             JsonObject wholeRsp = JsonConverter.asJsonObject(json).getAsJsonObject("data");
             TypeToken token = new TypeToken<HashMap<String, RoomEntity>>() {};
             HashMap<String, RoomEntity> resultsMap = gson.fromJson(wholeRsp, token.getType());

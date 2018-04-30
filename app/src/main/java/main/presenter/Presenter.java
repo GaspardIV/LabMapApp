@@ -1,4 +1,4 @@
-package presenter;
+package main.presenter;
 
 
 import android.view.GestureDetector;

@@ -1,4 +1,4 @@
-package model.entities;
+package main.model.entities;
 
 /**
  * Created by otto on 26.04.18.

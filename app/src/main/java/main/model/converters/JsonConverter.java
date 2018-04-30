@@ -1,4 +1,4 @@
-package model.converters;
+package main.model.converters;
 
 
 import com.google.gson.JsonArray;

@@ -1,4 +1,4 @@
-package model.entities;
+package main.model.entities;
 
 class UserEntity {
     String name;

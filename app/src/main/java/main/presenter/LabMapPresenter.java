@@ -1,4 +1,4 @@
-package presenter;
+package main.presenter;
 
 import android.util.Log;
 import android.view.GestureDetector;
@@ -12,9 +12,9 @@ import com.android.volley.toolbox.Volley;
 
 import java.util.List;
 
-import model.DownloadRequest;
-import model.entities.RoomEntity;
-import view.LabMapView;
+import main.model.DownloadRequest;
+import main.model.entities.RoomEntity;
+import main.view.LabMapView;
 
 public class LabMapPresenter implements Presenter {
 

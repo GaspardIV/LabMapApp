@@ -1,4 +1,4 @@
-package view;
+package main.view;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
@@ -15,10 +15,10 @@ import com.gaspard.labmapapp.R;
 
 import java.util.Locale;
 
-import presenter.LabMapPresenter;
-import presenter.Presenter;
-import view.fragments.Fragment2000;
-import view.fragments.Fragment3000;
+import main.presenter.LabMapPresenter;
+import main.presenter.Presenter;
+import main.view.fragments.Fragment2000;
+import main.view.fragments.Fragment3000;
 
 
 public class MainActivity extends FragmentActivity implements LabMapView {

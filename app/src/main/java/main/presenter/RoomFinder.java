@@ -1,16 +1,10 @@
-package presenter;
+package main.presenter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.view.View;
-import android.widget.TextView;
-
-import com.gaspard.labmapapp.R;
 
 import java.util.HashMap;
-import java.util.Locale;
 
-import model.entities.RoomEntity;
+import main.model.entities.RoomEntity;
 
 
 public class RoomFinder {
