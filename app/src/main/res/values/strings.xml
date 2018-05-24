@@ -1,8 +1,18 @@
 <resources>
     <string name="app_name">LabMapApp</string>
-    <string name="action_settings">Settings</string>
     <string name="strike_doors_strike"><strike≯̸D̸̸̶̸̸O̸̸̶̸̸O̸̸̶̸̸R̸̸̶̸̸S̸̸̶̸̸</strike></string>
     <string name="not_used">NOT USED</string>
     <string name="in_use">IN USE</string>
     <string name="question_mark">"??"</string>
+    <string name="_3043">3043</string>
+    <string name="_3042">3042</string>
+    <string name="_3044">3044</string>
+    <string name="_3041">3041</string>
+    <string name="_3045">3045</string>
+    <string name="_2043">2043</string>
+    <string name="_2042">2042</string>
+    <string name="_2044">2044</string>
+    <string name="doors">DOORS</string>
+    <string name="_2041">2041</string>
+    <string name="_2045">2045</string>
 </resources>

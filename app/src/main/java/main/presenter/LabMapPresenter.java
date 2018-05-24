@@ -1,6 +1,5 @@
 package main.presenter;
 
-import android.util.Log;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
@@ -10,6 +9,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.Volley;
 
+import java.text.DateFormat;
+import java.util.Date;
 import java.util.List;
 
 import main.model.DownloadRequest;
@@ -18,6 +19,9 @@ import main.view.LabMapView;
 
 public class LabMapPresenter implements Presenter {
 
+    private static final String UPDATE_INFO_PREFIX = "Last update: ";
+    private static final String UPDATE_FAILED = "failed! ";
+    private static final String URL_TM385898_LABMAP_API_ROOMS = "http://students.mimuw.edu.pl/~tm385898/labmap/api/rooms/";
     private LabMapView view;
 
     public LabMapPresenter(LabMapView view) {
@@ -29,24 +33,32 @@ public class LabMapPresenter implements Presenter {
         refreshInfo();
     }
 
-
     public void refreshInfo() {
+        view.startRotatingRefreshFab();
         RequestQueue queue = Volley.newRequestQueue(view.getContext());
-        String url = "http://students.mimuw.edu.pl/~tm385898/labmap/api/rooms/";
-        DownloadRequest request = new DownloadRequest(url, new Response.Listener<List<RoomEntity>>() {
-            @Override
-            public void onResponse(List<RoomEntity> response) {
-                for (RoomEntity room : response) {
-                    view.updateRoomView(RoomFinder.findRoomId(view.getContext(), room), room.getFreeStations(), room.getOccupiedStations());
-                }
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                Log.d("XDDDDDD", "onResponse: " + ":(((((((((((((((((((");
-            }
-        });
+        DownloadRequest request = new DownloadRequest(
+                URL_TM385898_LABMAP_API_ROOMS,
+                new Response.Listener<List<RoomEntity>>() {
+                    @Override
+                    public void onResponse(List<RoomEntity> response) {
+                        for (RoomEntity room : response) {
+                            view.updateRoomView(RoomFinder.findRoomId(view.getContext(), room), room.getFreeStations(), room.getOccupiedStations());
+                        }
+                        view.changeInfoTextView(UPDATE_INFO_PREFIX + getCurrentTime());
+                        view.stopRotatingRefreshFab();
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        view.changeInfoTextView(UPDATE_INFO_PREFIX + UPDATE_FAILED + getCurrentTime());
+                        view.stopRotatingRefreshFab();
+                    }
+
+                }
+        );
+
         queue.add(request);
     }
 
@@ -71,6 +83,12 @@ public class LabMapPresenter implements Presenter {
 
     public ScaleListener getNewScaleListener() {
         return new ScaleListener();
+    }
+
+    private String getCurrentTime() {
+        String currentDateTimeString;
+        currentDateTimeString = DateFormat.getTimeInstance().format(new Date());
+        return currentDateTimeString;
     }
 
     public class MyGestureListener extends GestureDetector.SimpleOnGestureListener {
@@ -110,6 +128,5 @@ public class LabMapPresenter implements Presenter {
             return true;
         }
     }
-
 
 }

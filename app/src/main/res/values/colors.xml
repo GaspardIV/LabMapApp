@@ -1,10 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#cc9a05</color>
     <color name="colorPrimaryDark">#cc9a05</color>
     <color name="colorAccent">#ff4081</color>
     <color name="colorBar">#ffc107</color>
-    <color name="colorSemiBar">#80ffc107</color>
 
     <color name="red">#80FF0000</color>
     <color name="pink">#80FF6699</color>

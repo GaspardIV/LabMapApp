@@ -8,6 +8,20 @@
     android:clipChildren="false"
     android:clipToPadding="false">
 
+    <TextView
+        android:id="@+id/text_info"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:gravity="start"
+        android:textAlignment="viewStart"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/fab_refresh"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="SpUsage" />
+
     <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
@@ -19,24 +33,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-    </FrameLayout>
+        app:layout_constraintTop_toTopOf="parent" />
 
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab_refresh"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
+        android:onClick="onFabClick"
         android:src="@drawable/ic_refresh_white_24dp"
         app:backgroundTint="@color/colorBar"
         app:elevation="17dp"
         app:fabSize="mini"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="onFabClick"
-        app:rippleColor="@color/colorAccent" />
+        app:rippleColor="@color/cyan" />
 </android.support.constraint.ConstraintLayout>
 
     <!--<fragment--><!--android:id="@+id/view2000"--><!--android:name="com.gaspard.labmapapp.fragments.Fragment2000"--><!--android:layout_width="match_parent"--><!--android:layout_height="match_parent"--><!--android:layout_weight="1"--><!--tools:layout="@layout/fragment2000" />-->

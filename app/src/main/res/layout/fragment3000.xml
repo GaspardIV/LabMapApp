@@ -2,7 +2,6 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/whole_view2000"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:clipChildren="false"
@@ -23,7 +22,8 @@
         app:layout_constraintEnd_toStartOf="@+id/room_3042"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/room_3044"
-        app:layout_constraintTop_toTopOf="@+id/room_3044">
+        app:layout_constraintTop_toTopOf="@+id/room_3044"
+        tools:targetApi="lollipop">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:text="3043"
+                android:text="@string/_3043"
                 android:textAlignment="center"
                 android:textSize="40dp"
                 android:textStyle="bold"
@@ -53,7 +53,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:textAllCaps="false" />
+                app:textAllCaps="false"
+                tools:ignore="SpUsage" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
@@ -74,7 +75,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/room_3043"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:targetApi="lollipop">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -95,7 +97,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:text="3042"
+                android:text="@string/_3042"
                 android:textAlignment="center"
                 android:textSize="40dp"
                 android:textStyle="bold"
@@ -104,7 +106,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:textAllCaps="false" />
+                app:textAllCaps="false"
+                tools:ignore="SpUsage" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
@@ -127,7 +130,8 @@
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:targetApi="lollipop">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -148,7 +152,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:text="3044"
+                android:text="@string/_3044"
                 android:textAlignment="center"
                 android:textSize="40dp"
                 android:textStyle="bold"
@@ -157,7 +161,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:textAllCaps="false" />
+                app:textAllCaps="false"
+                tools:ignore="SpUsage" />
 
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
@@ -177,7 +182,8 @@
         app:layout_constraintEnd_toStartOf="@+id/room_3041"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/room_3045"
-        app:layout_constraintTop_toBottomOf="@+id/room_3043">
+        app:layout_constraintTop_toBottomOf="@+id/room_3043"
+        tools:targetApi="lollipop">
 
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="match_parent"
@@ -210,7 +216,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/coridor"
         app:layout_constraintTop_toBottomOf="@+id/room_3042"
-        app:layout_constraintVertical_chainStyle="packed">
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:targetApi="lollipop">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -231,7 +238,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:text="3041"
+                android:text="@string/_3041"
                 android:textAlignment="center"
                 android:textSize="40dp"
                 android:textStyle="bold"
@@ -240,7 +247,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:textAllCaps="false" />
+                app:textAllCaps="false"
+                tools:ignore="SpUsage" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 
@@ -262,7 +270,8 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/room_3044">
+        app:layout_constraintTop_toBottomOf="@+id/room_3044"
+        tools:targetApi="lollipop">
 
         <android.support.constraint.ConstraintLayout
             android:layout_width="match_parent"
@@ -283,7 +292,7 @@
                 android:layout_height="wrap_content"
                 android:clipChildren="false"
                 android:clipToPadding="false"
-                android:text="3045"
+                android:text="@string/_3045"
                 android:textAlignment="center"
                 android:textSize="40dp"
                 android:textStyle="bold"
@@ -292,7 +301,8 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:textAllCaps="false" />
+                app:textAllCaps="false"
+                tools:ignore="SpUsage" />
         </android.support.constraint.ConstraintLayout>
     </android.support.v7.widget.CardView>
 </android.support.constraint.ConstraintLayout>

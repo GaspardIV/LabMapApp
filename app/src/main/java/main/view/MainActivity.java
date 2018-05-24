@@ -2,13 +2,15 @@ package main.view;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
-import android.support.v4.view.GestureDetectorCompat;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.v4.app.FragmentActivity;
+import android.support.v4.view.GestureDetectorCompat;
 import android.view.MotionEvent;
 import android.view.ScaleGestureDetector;
 import android.view.View;
-
-import android.support.v4.app.FragmentActivity;
+import android.view.animation.Animation;
+import android.view.animation.RotateAnimation;
 import android.widget.TextView;
 
 import com.gaspard.labmapapp.R;
@@ -23,20 +25,25 @@ import main.view.fragments.Fragment3000;
 
 public class MainActivity extends FragmentActivity implements LabMapView {
 
+    Presenter presenter = new LabMapPresenter(this);
     private GestureDetectorCompat mDetector;
     private ScaleGestureDetector mScaleGestureDetector;
-
     private int actualFloor;
     private Fragment2000 firstFragment;
     private Fragment3000 secondFragment;
     private View stage;
-    Presenter presenter = new LabMapPresenter(this);
+    private TextView infoTextView;
+    private FloatingActionButton fabRefresh;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         stage = findViewById(R.id.fragment_container);
+        infoTextView = findViewById(R.id.text_info);
+        fabRefresh = findViewById(R.id.fab_refresh);
+
         initGesturesDetectors();
         initFragments(savedInstanceState);
         presenter.onCreate();
@@ -104,5 +111,27 @@ public class MainActivity extends FragmentActivity implements LabMapView {
 
     public void onFabClick(View view) {
         presenter.refreshInfo();
+    }
+
+    @Override
+    public void changeInfoTextView(String text) {
+        infoTextView.setText(text);
+    }
+
+    @Override
+    public void stopRotatingRefreshFab() {
+        fabRefresh.clearAnimation();
+        fabRefresh.setEnabled(true);
+    }
+
+    @Override
+    public void startRotatingRefreshFab() {
+        fabRefresh.setEnabled(false);
+        RotateAnimation rotateAnimation = new RotateAnimation(0, 360,
+                Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        rotateAnimation.setDuration(900);
+        rotateAnimation.setRepeatCount(Animation.INFINITE);
+        rotateAnimation.setRepeatMode(Animation.RESTART);
+        fabRefresh.startAnimation(rotateAnimation);
     }
 }

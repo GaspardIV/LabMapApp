@@ -35,15 +35,6 @@ public class RoomEntity {
     /**
      * Setter.
      *
-     * @param roomStrId - new value of room String Id repr.
-     */
-    public void setRoomStrId(String roomStrId) {
-        this.roomStrId = roomStrId;
-    }
-
-    /**
-     * Setter.
-     *
      * @param computers new value for computers
      */
     public void setComputers(ArrayList<ComputerEntity> computers) {
@@ -57,6 +48,15 @@ public class RoomEntity {
      */
     public String getRoomStrId() {
         return roomStrId;
+    }
+
+    /**
+     * Setter.
+     *
+     * @param roomStrId - new value of room String Id repr.
+     */
+    public void setRoomStrId(String roomStrId) {
+        this.roomStrId = roomStrId;
     }
 
     /**

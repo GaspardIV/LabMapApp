@@ -12,4 +12,10 @@ public interface LabMapView {
     Context getContext();
 
     void updateRoomView(int roomId, int freeStations, int occupiedStations);
+
+    void changeInfoTextView(String text);
+
+    void stopRotatingRefreshFab();
+
+    void startRotatingRefreshFab();
 }
