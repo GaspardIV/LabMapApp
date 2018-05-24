@@ -22,7 +22,7 @@ public class LabMapPresenter implements Presenter {
     private static final String UPDATE_INFO_PREFIX = "Last update: ";
     private static final String UPDATE_FAILED = "failed! ";
     private static final String URL_TM385898_LABMAP_API_ROOMS = "http://students.mimuw.edu.pl/~tm385898/labmap/api/rooms/";
-    private LabMapView view;
+    private final LabMapView view;
 
     public LabMapPresenter(LabMapView view) {
         this.view = view;
@@ -60,21 +60,6 @@ public class LabMapPresenter implements Presenter {
         );
 
         queue.add(request);
-    }
-
-    @Override
-    public void onPause() {
-
-    }
-
-    @Override
-    public void onResume() {
-
-    }
-
-    @Override
-    public void onDestroy() {
-
     }
 
     public MyGestureListener getNewGestureListener() {

@@ -7,11 +7,11 @@ import android.view.ScaleGestureDetector;
 public interface Presenter {
     void onCreate();
 
-    void onPause();
+    // --Commented out by Inspection (24.05.18 13:41):void onPause();
 
-    void onResume();
+    // --Commented out by Inspection (24.05.18 13:41):void onResume();
 
-    void onDestroy();
+    // --Commented out by Inspection (24.05.18 13:41):void onDestroy();
 
     GestureDetector.OnGestureListener getNewGestureListener();
 

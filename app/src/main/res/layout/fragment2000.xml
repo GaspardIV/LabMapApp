@@ -18,7 +18,7 @@
         android:translationZ="10dp"
 
         app:cardCornerRadius="4dp"
-        app:layout_constraintBottom_toTopOf="@+id/coridor"
+        app:layout_constraintBottom_toTopOf="@+id/corridor"
         app:layout_constraintEnd_toStartOf="@+id/room_2042"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/room_2044"
@@ -168,7 +168,7 @@
     </android.support.v7.widget.CardView>
 
     <android.support.v7.widget.CardView
-        android:id="@+id/coridor"
+        android:id="@+id/corridor"
         android:layout_width="100dp"
         android:layout_height="200dp"
         android:alpha="0.6"
@@ -215,7 +215,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/coridor"
+        app:layout_constraintStart_toEndOf="@+id/corridor"
         app:layout_constraintTop_toBottomOf="@+id/room_2042"
         app:layout_constraintVertical_chainStyle="packed"
         tools:targetApi="lollipop">
@@ -267,7 +267,7 @@
 
         app:cardCornerRadius="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/coridor"
+        app:layout_constraintEnd_toStartOf="@+id/corridor"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintHorizontal_chainStyle="packed"
         app:layout_constraintStart_toStartOf="parent"

@@ -2,6 +2,8 @@ package main.view;
 
 import android.animation.ObjectAnimator;
 import android.content.Context;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v4.app.FragmentActivity;
@@ -25,7 +27,7 @@ import main.view.fragments.Fragment3000;
 
 public class MainActivity extends FragmentActivity implements LabMapView {
 
-    Presenter presenter = new LabMapPresenter(this);
+    private final Presenter presenter = new LabMapPresenter(this);
     private GestureDetectorCompat mDetector;
     private ScaleGestureDetector mScaleGestureDetector;
     private int actualFloor;
@@ -47,14 +49,19 @@ public class MainActivity extends FragmentActivity implements LabMapView {
         initGesturesDetectors();
         initFragments(savedInstanceState);
         presenter.onCreate();
+
+        // ATTENTION: This was auto-generated to handle app links.
+        Intent appLinkIntent = getIntent();
+        String appLinkAction = appLinkIntent.getAction();
+        Uri appLinkData = appLinkIntent.getData();
     }
 
-    public void initGesturesDetectors() {
+    private void initGesturesDetectors() {
         mDetector = new GestureDetectorCompat(this, presenter.getNewGestureListener());
         mScaleGestureDetector = new ScaleGestureDetector(this, presenter.getNewScaleListener());
     }
 
-    public void initFragments(Bundle savedInstanceState) {
+    private void initFragments(Bundle savedInstanceState) {
         firstFragment = new Fragment2000();
         secondFragment = new Fragment3000();
         if (savedInstanceState == null) {
@@ -109,7 +116,7 @@ public class MainActivity extends FragmentActivity implements LabMapView {
         return super.onTouchEvent(event);
     }
 
-    public void onFabClick(View view) {
+    public void onFabClick(@SuppressWarnings("unused") View view) {
         presenter.refreshInfo();
     }
 

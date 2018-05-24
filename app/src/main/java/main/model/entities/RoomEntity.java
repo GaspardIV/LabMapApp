@@ -6,10 +6,12 @@ import java.util.ArrayList;
  * Created by otto on 20.04.18.
  */
 
+@SuppressWarnings("unused")
 public class RoomEntity {
     public static final String ROOM_STR_ID_PREFIX = "room_";
 
     private String roomStrId;
+    @SuppressWarnings("MismatchedQueryAndUpdateOfCollection")
     private ArrayList<ComputerEntity> computers;
     private int freeStations;
     private int occupiedStations;
@@ -32,14 +34,16 @@ public class RoomEntity {
     /* GETTERS AND SETTERS */
     /* GETTERS AND SETTERS */
 
-    /**
-     * Setter.
-     *
-     * @param computers new value for computers
-     */
-    public void setComputers(ArrayList<ComputerEntity> computers) {
-        this.computers = computers;
-    }
+// --Commented out by Inspection START (24.05.18 13:41):
+//    /**
+//     * Setter.
+//     *
+//     * @param computers new value for computers
+//     */
+//    public void setComputers(ArrayList<ComputerEntity> computers) {
+//        this.computers = computers;
+//    }
+// --Commented out by Inspection STOP (24.05.18 13:41)
 
     /**
      * Getter.
